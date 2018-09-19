@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>插入排序</title>
+</head>
+
+<body>
+  <p>最普通的排序算法， 从数组下标1开始每增1项排序一次，越往后遍历次数越多；</p>
+  <script>  
+    function sort1(array) {
+      var len = array.length,
+        i, j, tmp, result;
+      // 设置数组副本
+      result = array.slice(0);
+      for (i = 1; i < len; i++) {
+        tmp = result[i];
+        j = i - 1;
+        while (j >= 0 && tmp < result[j]) {
+          result[j + 1] = result[j];
+          j--;
+        }
+        result[j + 1] = tmp;
+      }
+      return result;
+    }
+  </script>
+
+</body>
+
+</html>

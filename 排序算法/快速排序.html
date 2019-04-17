@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>快速排序</title>
+  <title>快速排序:不是一种稳定的排序算法</title>
 </head>
 
 <body>
@@ -44,7 +44,7 @@
     1.以第一个数组元素作为关键数据(基准)，赋值给privot，即privot=A[0];
     2.设置两个变量i、j，排序开始的时候：i=0，j=N-1(N为长度);
     3.从j开始向前搜索(j--),找到第一个小于privot的值A[j]，将A[j]和A[i]互换,i+1;
-    4.从i开始向前搜索(i++),找到第一个大于privot的值A[i]，将A[j]和A[i]互换,j-1;
+    4.从i开始向后搜索(i++),找到第一个大于privot的值A[i]，将A[j]和A[i]互换,j-1;
     5.重复第3、4步，直到i=j;
   **/
   function quicksort(array) {
@@ -82,7 +82,7 @@
     return array
   }
 
-quicksort([1,3,3,3,3,3,2,2,2,2,2,9,9,9,9,5,5,5,5,5,4,4,4,4,6,6,6,6]);
+  quicksort([1, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 9, 9, 9, 9, 5, 5, 5, 5, 5, 4, 4, 4, 4, 6, 6, 6, 6]);
 
 </script>
 

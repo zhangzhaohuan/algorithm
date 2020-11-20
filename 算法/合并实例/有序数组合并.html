@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            题目：已知升序数组A=[2,6,8],B=[3,6,7,9];合并成升序数组C
+    
+            思路：
+            * 
+        */
+
+        function concatList(arr1, arr2) {
+            var i = 0; j = 0;
+            var len1 = arr1.length, len2 = arr2.length;
+            var arr3 = [];
+
+            while (i < len1 && j < len2) {
+                a = arr1[i];
+                b = arr2[j];
+                if (a > b) {
+                    c = b;
+                    j++;
+                } else {
+                    c = a;
+                    i++;
+                }
+                arr3.push(c);
+            }
+            return arr3;
+        }
+
+        function _defineProperties(target, 
+        ) {
+            for (var i = 0; i < props.length; i++) {
+                var descriptor = props[i];
+                descriptor.enumerable = descriptor.enumerable || false;
+                descriptor.configurable = true;
+                if ("value" in descriptor) descriptor.writable = true;
+                Object.defineProperty(target, descriptor.key, descriptor);
+            }
+        }
+
+
+
+        function _createClass(Constructor, protoProps, staticProps) {
+            if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+            if (staticProps) _defineProperties(Constructor, staticProps);
+            return Constructor;
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

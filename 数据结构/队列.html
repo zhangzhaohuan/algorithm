@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>队列</title>
+</head>
+
+<body>
+  <h3>队列的基本性质:</h3>
+  <ul>
+    <li>先进先出:FIFO</li>
+  </ul>
+
+  <div>感觉这个讲的浅显易懂: <a href="https://www.jb51.net/article/97231.htm">JavaScript队列</a></div>
+ 
+  <br>
+</body>
+
+<script>
+
+  // 队列
+  function Queue() {
+    var items = [];
+    this.enqueue = function (ele) {
+      items.push(ele);
+    };//入队
+    this.dequeue = function () {
+      return items.shift();
+    };//出队
+    this.front = function () {
+      return items[0];
+    };//查看队头元素
+    this.isEmpty = function () {
+      return items.length === 0;
+    };//判断队列是否为空
+    this.size = function () {
+      return items.length;
+    };//队列大小
+    this.clear = function () {
+      items = [];
+    };//清空队列
+    this.print = function () {
+      console.log(items.toString());
+    };//打印队列
+  }
+  var queue = new Queue(); //声明队列的实例
+
+  var queue = new Queue();
+  console.log("队列是否为空： " + queue.isEmpty());
+  queue.enqueue('Mr.A');
+  queue.enqueue('Mr.B');
+  queue.enqueue('Mr.C');
+  console.log("当前队列：");
+  queue.print();
+  console.log("出队的人： " + queue.dequeue());
+  console.log("当前队列：");
+  queue.print();
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</html>
